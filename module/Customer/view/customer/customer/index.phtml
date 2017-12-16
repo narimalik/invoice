@@ -1,0 +1,66 @@
+<?php
+
+
+foreach ($result as $data) {
+	//echo $data->customer_account_number;
+}
+
+?>
+<h1>
+		Customer List
+</h1>
+<table border="1">
+
+	<?php
+	if($result){?>
+	<tr>
+		<td>
+			Customer Name				
+		</td>
+		<td>
+			Customer Account
+		</td>
+		<td>
+			Customer Phone No
+		</td>
+		<td>
+			Detail
+		</td>
+		<td>
+			Update
+		</td>		
+	</tr>
+
+	<?php
+	foreach ($result as $data) {
+	?>
+
+	<tr>
+		<td>
+			<?php echo $data["customer_name"]; ?>  
+		</td>
+		<td>
+			<?php echo $data["customer_account_number"]; ?>
+		</td>
+		<td>
+			<?php echo $data["customer_phone_primary"]; ?>
+		</td>
+		<td>
+			<a href="<?php echo $this->url('customer',array('action'=>'customerDetail','id'=>$data["id"])) ?>">Detail</a>
+		</td>
+		<td>
+			<a href="<?php echo $this->url('customer',array('action'=>'updatecustomer','id'=>$data["id"])) ?>">Update</a>
+		</td>		
+	</tr>
+
+	<?php }  /// End foreach
+
+	} else{ ?>
+
+	<tr>
+			<td>
+				No Customer Found
+			</td>
+	</tr>
+	<?php } ?>
+</table>

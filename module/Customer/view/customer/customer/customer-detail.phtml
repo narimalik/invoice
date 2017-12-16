@@ -1,0 +1,168 @@
+<?php
+
+
+
+?>
+
+<h1>Customer Detail </h1>
+
+<table border="1">
+
+	<?php
+	if($result){?>
+	
+	<?php
+	foreach ($result as $data) {
+	?>
+
+	<tr>
+		<td> Customer Name</td>
+		<td>
+			<?php echo $data["customer_name"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td> Customer Account</td>
+		<td>
+			<?php echo $data["customer_account_number"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td> Contact Person Name</td>
+		<td>
+			<?php echo $data["contact_person_name"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td> Primary Phone Number</td>
+		<td>
+			<?php echo $data["customer_phone_primary"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td> Alternative Phone Number</td>
+		<td>
+			<?php echo $data["customer_phone_alternate"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td> Email</td>
+		<td>
+			<?php echo $data["customer_email"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Fax Number</td>
+		<td>
+			<?php echo $data["customer_fax"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Invoice Address Line 1</td>
+		<td>
+			<?php echo $data["customer_invoice_address1"]; ?>  
+		</td>	
+	</tr>
+	<tr>
+		<td>Invoice Address Line 2</td>
+		<td>
+			<?php echo $data["customer_invoice_address2"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Invoice Post Code</td>
+		<td>
+			<?php echo $data["customer_invoice_postcode"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Delivery Address Line 1</td>
+		<td>
+			<?php echo $data["customer_delivery_address1"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Delivery Address Line 2</td>
+		<td>
+			<?php echo $data["customer_delivery_address2"]; ?>  
+		</td>	
+	</tr>
+	
+	<tr>
+		<td>Delivery Post Code</td>
+		<td>
+			<?php echo $data["customer_delivery_postcode"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>VAT Applied</td>
+		<td>
+			<?php echo $data["vat_applied"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Additional Info</td>
+		<td>
+			<?php echo $data["customer_additional_info"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Payment Term</td>
+		<td>
+			<?php echo $data["customer_payment_term"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Customer Group</td>
+		<td>
+			<?php echo $data["customer_group"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Customer Notes</td>
+		<td>
+			<?php echo $data["customer_notes"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Status</td>
+		<td>
+			<?php echo $data["customer_status"]; ?>  
+		</td>	
+	</tr>
+
+	<tr>
+		<td>Account Opening Date</td>
+		<td>
+			<?php echo $data["date_created"]; ?>  
+		</td>	
+	</tr>
+
+
+	<?php }  /// End foreach
+
+	} else{ ?>
+
+	<tr>
+			<td>
+				No Customer Found
+			</td>
+	</tr>
+	<?php } ?>
+</table>

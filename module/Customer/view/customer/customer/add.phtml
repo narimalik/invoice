@@ -1,0 +1,136 @@
+<h1>Customer Add Form</h1>
+
+<?php
+
+
+$form = $this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+?>
+<p id="message">
+	<?php 
+		if(isset($this->message) && $this->message!="")
+		{
+			echo $this->message; 
+		}
+	?>
+</p>
+<div>
+	<?php echo $this->formRow($form->get('name')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('accountno')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('accountperson')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('isvat')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('primaryphonenumber')); ?>
+</div>
+<div>
+	<?php echo $this->formRow($form->get('alternatephonenumber')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('fax')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('email')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('customerinformation')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('deliveryaddressline1')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('deliveryaddressline2')); ?>
+</div>
+<div>
+	<?php echo $this->formRow($form->get('deliverypostcode')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('invoiceaddressline1')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('invoiceaddressline2')); ?>
+</div>
+<div>
+	<?php echo $this->formRow($form->get('invoicepostcode')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('customerpaymentterm')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('customergroup')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('customernotes')); ?>
+</div>
+
+<div>
+	<?php echo $this->formRow($form->get('customerstatus')); ?>
+</div>
+
+<?php
+	echo $this->formsubmit($form->get('submit'));
+?>
+
+<?php echo $this->form()->closeTag(); ?>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+
+		$("#accountno").blur(function(){
+			val = $("#accountno").val();
+			//alert(val);
+			$.ajax({
+				url:'http://zf2/customer/add',
+				//contentType: "application/json; charset=utf-8",
+				type:'post',
+	            data: {'name':val},
+	            dataType:'json',
+	            
+	            success: function(data1){
+	            	//alert(data1.ajaxMessageCode);
+	            	if(data1.ajaxMessageCode==1)
+	            	{
+	            		$("#message").html("Account Number Already Exist!");
+	            	}
+	            },
+	            error: function(jqXHR,textStatus,errorThrown){
+	            	//alert( jqXHR.responseText);
+		            /*var error = $.parseJSON(jqXHR.responseText);
+		            var content = error.content;	
+		            console.log(content.message);
+		            if(content.display_exceptions)
+		            console.log(content.exception.xdebug_message);*/
+    				},  
+			});
+		});
+	});	
+
+
+
+
+</script>

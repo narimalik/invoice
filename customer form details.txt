@@ -1,0 +1,20 @@
+Add New Customer
+Customer Name
+Customer Account No
+Contact Person Name
+Is VAT Applied?
+Primary Phone No
+Customer Alternate Phone
+Customer Fax
+Customer Email
+Customer Additional Info
+Delivery Address Line1
+Delivery Address Line2
+Delivery PostCode
+Invoice Address Line1
+Invoice Address Line2
+Invoice PostCode
+Customer Payment Term
+Customer Group
+Customer Notes
+Status
