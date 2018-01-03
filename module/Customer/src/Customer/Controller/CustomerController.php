@@ -21,6 +21,10 @@ class CustomerController extends AbstractActionController
 
     public function indexAction()
     {
+        $customerModuleNavigation =array(
+            array("label"=>"Add Customer","href"=>"customer/add")
+
+        );
        return new ViewModel(array('result' => $this->getCustomerTable()->getALLCustomers(),
          ));
     }

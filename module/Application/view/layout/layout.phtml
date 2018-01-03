@@ -15,17 +15,18 @@ error_reporting(E_ALL);
         ?>
   <!-- Le styles -->
   <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                  ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap.min.css'))
-                  ->prependStylesheet($this->basePath('bower_components/font-awesome/css/font-awesome.min.css'))
-                  ->prependStylesheet($this->basePath('bower_components/Ionicons/css/ionicons.min.css'))
-                  ->prependStylesheet($this->basePath('dist/css/AdminLTE.min.css')) /// theme style
-                  ->prependStylesheet($this->basePath('dist/css/skins/_all-skins.min.css')) 
-                  ->prependStylesheet($this->basePath('bower_components/morris.js/morris.css')) /// Moris chart 
-                  ->prependStylesheet($this->basePath('bower_components/jvectormap/jquery-jvectormap.css')) ///jvectormap
-                  ->prependStylesheet($this->basePath('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')) //// Date Picker
-                  ->prependStylesheet($this->basePath('bower_components/bootstrap-daterangepicker/daterangepicker.css'))  ////Daterange picker
-                  ->prependStylesheet($this->basePath('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')) ////text editor
-                   ?>
+        ->prependStylesheet($this->basePath('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')) ////text editor
+      ->prependStylesheet($this->basePath('bower_components/bootstrap-daterangepicker/daterangepicker.css'))  ////Daterange picker
+      ->prependStylesheet($this->basePath('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')) //// Date Picker
+      ->prependStylesheet($this->basePath('bower_components/jvectormap/jquery-jvectormap.css')) ///jvectormap
+      ->prependStylesheet($this->basePath('bower_components/morris.js/morris.css')) /// Moris chart 
+      ->prependStylesheet($this->basePath('dist/css/skins/_all-skins.min.css')) 
+      ->prependStylesheet($this->basePath('dist/css/AdminLTE.min.css')) /// theme style
+      ->prependStylesheet($this->basePath('bower_components/Ionicons/css/ionicons.min.css'))
+      ->prependStylesheet($this->basePath('bower_components/font-awesome/css/font-awesome.min.css'))
+      ->prependStylesheet($this->basePath('bower_components/bootstrap/dist/css/bootstrap.min.css'))
+      
+       ?>
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -519,9 +520,6 @@ error_reporting(E_ALL);
 
 
 
-
-
-
   
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -737,18 +735,22 @@ error_reporting(E_ALL);
 ->prependFile($this->basePath('bower_components/fastclick/lib/fastclick.js')) /// FastClick
 ->prependFile($this->basePath('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')) /// Slimscroll
 ->prependFile($this->basePath('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')) /// Bootstrap WYSIHTML5
+
 ->prependFile($this->basePath('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')) /// datepicker
-->prependFile($this->basePath('bower_components/moment/min/moment.min.js')) /// daterangepicker    
+->prependFile($this->basePath('bower_components/bootstrap-daterangepicker/daterangepicker.js')) /// daterangepicker    
+->prependFile($this->basePath('bower_components/moment/min/moment.min.js')) /// 
 ->prependFile($this->basePath('bower_components/jquery-knob/dist/jquery.knob.min.js')) /// jQuery Knob Chart
+
 ->prependFile($this->basePath('plugins/jvectormap/jquery-jvectormap-world-mill-en.js')) /// 
 ->prependFile($this->basePath('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')) /// jvectormap
 ->prependFile($this->basePath('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')) /// Sparkline
+
 ->prependFile($this->basePath('bower_components/morris.js/morris.min.js'))
 ->prependFile($this->basePath('bower_components/raphael/raphael.min.js')) /// Morris.js charts 
-->prependFile($this->basePath('bower_components/bootstrap/dist/js/bootstrap.min.js')) /// Bootstrap 3.3.7
+
+->prependFile($this->basePath('bower_components/bootstrap/dist/js/bootstrap.min.js')) /// Bootstrap 3.3.7    
 ->prependFile($this->basePath('bower_components/jquery-ui/jquery-ui.min.js')) /// jQuery UI 1.11.4
 ->prependFile($this->basePath('bower_components/jquery/dist/jquery.min.js')) //// Jquery3
-    
     
     
     

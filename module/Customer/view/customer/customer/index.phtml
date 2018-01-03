@@ -1,4 +1,99 @@
-<?php
+<style type="text/css">
+
+	.custom-navigation ul
+	{
+		background-color: #ccc; display: inline-block; display: flex; padding: 0; list-style: none;  
+	}
+
+	.custom-navigation ul li a{
+		background-color: #ff6666;
+		padding: 10px;
+		display: block;
+	}
+
+</style>>
+
+<section class="content-header">
+  <h1>
+    Customer 
+    <small>Management</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Dashboard</li>
+  </ol>
+</section>
+
+
+
+<section class="content-header">
+	<div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            
+             
+            <div class="box-body custom-navigation">
+            	<div class="col-sm-12">
+	            	<ul>
+	                  	<li>
+	                  		<a href="">Menu 1</a>
+	                  	</li>
+
+	                  	<li>
+	                  		<a href="">Menu 2</a>
+	                  	</li>
+
+	                  	<li>
+	                  		<a href="">Menu 3</a>
+	                  	</li>
+
+	                  	<li>
+	                  		<a href="">Menu 4</a>
+	                  	</li>
+	                 </ul>
+              	</div>
+              <div class="row">
+                <div class="col-md-8">
+                  
+
+                </div>
+               
+              </div>              
+            </div>
+            <!-- ./box-body -->
+            
+          </div>
+        </div>
+    </div>        
+</section>
+
+
+
+
+
+<section class="content">
+	<div class="row">
+        <div class="col-md-12">
+          <div class="box">
+
+         	  <div class="box-header with-border">
+              <h3 class="box-title">Customer List</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+
+            
+              
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  
+                  <?php
 
 
 foreach ($result as $data) {
@@ -6,9 +101,7 @@ foreach ($result as $data) {
 }
 
 ?>
-<h1>
-		Customer List
-</h1>
+
 <table border="1">
 
 	<?php
@@ -64,3 +157,15 @@ foreach ($result as $data) {
 	</tr>
 	<?php } ?>
 </table>
+
+
+                </div>               
+              </div>              
+            </div>
+            <!-- ./box-body -->
+            
+          </div>
+        </div>
+    </div>        
+</section>
+
